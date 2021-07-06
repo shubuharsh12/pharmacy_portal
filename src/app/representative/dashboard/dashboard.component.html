@@ -1,0 +1,51 @@
+<!--Table for Pharmacy Demand Section-->
+<div class="container schedule my-2">
+    <form class="m-4" [formGroup]="form">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Pharmacy Id</th>
+                    <th>Pharmacy Name</th>
+                    <th>Medicine Name</th>
+                    <th>Supply count</th>
+                    <th>Demand</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let medi of pharmacy">
+                    <td>{{medi.pharmacy_id}}</td>
+                    <td>{{medi.pharmacyName}}</td>
+                    <td>{{medi.medicineName}}</td>
+                    <td>{{medi.supplyCount}}</td>
+                    <td>
+                        <input type="number" class="form-control" formControlName="demand" name="demand">
+                    </td>
+                    <td>
+                        <a (click)="onDemand(medi.pharmacy_id)" class="bg-warning p-2 nav-link text-center">Demand</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+<!--Table for Pharmacy Section-->
+<div class="container schedule my-2">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Pharmacy Name</th>
+                <th>Medicine Name</th>
+                <th>SupplyCount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medi of pharmacyList">
+                <td>{{medi.pharmacyName}}</td>
+                <td>{{medi.medicineName}}</td>
+                <td>{{medi.supplyCount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

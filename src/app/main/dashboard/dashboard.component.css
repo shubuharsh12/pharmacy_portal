@@ -1,0 +1,13 @@
+:root {
+    --main-color: rgb(13, 52, 124);
+}
+
+.theme-color {
+    color: rgb(13, 52, 124);
+}
+
+.content button .btn {
+    color: rgb(13, 52, 124);
+    background: none;
+    border: 2px solid rgb(13, 52, 124);
+}

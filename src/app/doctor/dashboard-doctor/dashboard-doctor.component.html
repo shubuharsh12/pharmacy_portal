@@ -1,0 +1,27 @@
+<!--Table for Schedule Section-->
+<div class="container schedule my-2">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Doctor name</th>
+                <th scope="col">Treating Ailment</th>
+                <th scope="col">Medicine</th>
+                <th scope="col">Doctor Contact</th>
+                <th>Schedule</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medi of repDoc">
+                <td>{{medi.doctor_name}}</td>
+                <td>{{medi.treating_Ailment}}</td>
+                <div *ngFor="let m1 of medi.medicine">
+                    <td>
+                        {{m1.medicine_name}}
+                    </td>
+                </div>
+                <td>{{medi.doctor_contact}}</td>
+                <td><a class="bg-warning p-2 nav-link text-center" routerLink="/representative">Schedule</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

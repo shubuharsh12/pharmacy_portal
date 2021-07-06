@@ -1,0 +1,225 @@
+<!--Table for Medicine Section-->
+<div class="container schedule my-2">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Medicine ID</th>
+                <th>Medicine Name</th>
+                <th>Number of Tablets In stock</th>
+                <th>Target Ailment</th>
+                <th>Composition</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medin of medi">
+                <td>{{medin.mId}}</td>
+                <td>{{medin.name}}</td>
+                <td>{{medin.numberOfTabletsInStock}}</td>
+                <td>{{medin.targetAilment}}</td>
+                <div *ngFor="let m1 of medin.chemicalComposition">
+                    <td>{{m1.chemicalComposition}}</td>
+                </div>
+                <td>{{medin.localDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--Table for Pharmacy Section-->
+<div class="container  p-2">
+    <div class="accordion accordion-flush schedule bg-primary" id="accordionFlushExample1">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne1">
+                    Pharmacy List
+                </button>
+            </h2>
+            <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne1" data-bs-parent="#accordionFlushExample1">
+                <div class="accordion-body">
+                    <div class="container schedule my-2">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Pharmacy Name</th>
+                                    <th>Medicine Name</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let medi of pharmacy">
+                                    <td>{{medi.pharmacyName}}</td>
+                                    <td>{{medi.medicineName}}</td>
+                                    <td>{{medi.supplyCount}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Table for Pharmacy Section-->
+<div class="container p-2">
+    <div class="accordion accordion-flush schedule bg-primary" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Medicine Description
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="container medi-container py-4 mb-2">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/synthroid.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Synthroid</h5>
+                                        <p class="card-text">Levothyroxine is used to treat an underactive thyroid (hypothyroidism). It replaces or provides more thyroid hormone, which is normally produced by the thyroid gland. Low thyroid hormone levels can occur naturally
+                                            or when the thyroid gland is injured by radiation/medications or removed by surgery. Having enough thyroid hormone is important for maintaining normal mental and physical activity. In children, having enough
+                                            thyroid hormone is important for normal mental and physical development.</p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4>Number of Tablets In stock: 18</h4>
+                                                <h4>Target Ailment:Thyroid</h4>
+                                                <h4>Composition: LEVOTHYROXINE</h4>
+                                                <h4>Date: 01/02/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/paracetamol.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-bold"><b>Paracetamol</b></h3>
+                                        <p class="card-text">Tablet is a medicine used to relieve pain and to reduce fever. It is used to treat many conditions such as headaches, body aches, toothaches, and the common cold. It works by inhibiting the release of certain chemicals
+                                            that cause pain and fever.</p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4><b>Number of Tablets In stock:</b> 10</h4>
+                                                <h4><b>Target Ailment:</b> Fever</h4>
+                                                <h4><b>Composition:</b> </h4>
+                                                <h4><b>Date:</b> 04/01/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/combiflam.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-bold"><b>Combiflam</b></h3>
+                                        <p class="card-text"> They work in different ways to reduce pain, swelling, and inflammation. This medicine is very effective in treating mild to moderate pain associated with migraine, headache, backache, period (menstrual) pain, dental
+                                            pain, and rheumatic and muscular pain. The anti-inflammatory component makes this medicine more effective in treating strains, sprains, and muscle pains.
+                                        </p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4><b>Number of Tablets In stock:</b> 30</h4>
+                                                <h4><b>Target Ailment:</b> Headache</h4>
+                                                <h4><b>Composition:</b> </h4>
+                                                <h4><b>Date:</b> 04/03/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/cylopam.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-bold"><b>Cyclopam</b></h3>
+                                        <p class="card-text"> Cyclopam Tablet is a combination medicine used in the treatment of abdominal pain. It works effectively to reduce abdominal pain and cramps by relaxing the muscles of the stomach and gut. It also blocks certain
+                                            chemical messengers that cause pain and fever.</p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4><b>Number of Tablets In stock:</b> 15</h4>
+                                                <h4><b>Target Ailment:</b> Stomach</h4>
+                                                <h4><b>Composition:</b> </h4>
+                                                <h4><b>Date:</b> 14/02/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/Gaviscon.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-bold"><b>Gaviscon</b></h3>
+                                        <p class="card-text">Aluminum and magnesium antacids work quickly to lower the acid in the stomach. Liquid antacids usually work faster/better than tablets or capsules.This medication works only on existing acid in the stomach. It does
+                                            not prevent acid production. It may be used alone or with other medications that lower acid production (including H2 blockers such as cimetidine/ranitidine and proton pump inhibitors such as omeprazole).</p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4><b>Number of Tablets In stock:</b> 45</h4>
+                                                <h4><b>Target Ailment:</b> Stomach</h4>
+                                                <h4><b>Composition:</b> </h4>
+                                                <h4><b>Date:</b> 24/05/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/orthoherb.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-bold"><b>Orthoherb</b></h3>
+                                        <p class="card-text">The uniquely formulated Orthoherb is 100% natural and gives relief from back pain, knee pain and all types of inflammatory joint conditions. It is prescribed by Ayurvedic practitioners for over 20 years and contains
+                                            23 herbs uniquely formulated for joint pains. Orthoherb works by protecting the synovial membrane from inflammation and damage, reducing the swelling due to its specific anti-inflammatory and diuretic action,
+                                            enhancing fluid production thus restoring the synovial fluid balance and consistency at bone joints.</p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4><b>Number of Tablets In stock:</b> 25</h4>
+                                                <h4><b>Target Ailment:</b> Joints</h4>
+                                                <h4><b>Composition:</b> </h4>
+                                                <h4><b>Date:</b> 24/01/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../../assets/images/medicines/savlon.jpg" class="img-fluid rounded-start" width="100%" height="auto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title text-bold"><b>Orthoherb</b></h3>
+                                        <p class="card-text">The uniquely formulated Orthoherb is 100% natural and gives relief from back pain, knee pain and all types of inflammatory joint conditions. It is prescribed by Ayurvedic practitioners for over 20 years and contains
+                                            23 herbs uniquely formulated for joint pains. Orthoherb works by protecting the synovial membrane from inflammation and damage, reducing the swelling due to its specific anti-inflammatory and diuretic action,
+                                            enhancing fluid production thus restoring the synovial fluid balance and consistency at bone joints.</p>
+                                        <p class="card-text"><small class="text-muted">
+                                                <h4><b>Number of Tablets In stock:</b> 25</h4>
+                                                <h4><b>Target Ailment:</b> Joints</h4>
+                                                <h4><b>Composition:</b> </h4>
+                                                <h4><b>Date:</b> 24/01/2021</h4>
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

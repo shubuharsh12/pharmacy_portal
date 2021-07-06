@@ -1,0 +1,13 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {
+    background: url("../assets/images/back4.jpg");
+    background-size: cover;
+    max-width: auto;
+    min-height: 100vh;
+}

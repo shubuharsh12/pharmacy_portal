@@ -1,0 +1,59 @@
+<!---HEading Section-->
+<div class="container schedule my-2">
+    <h1 class="text-primary text-center display-1">Schedule the meetings</h1>
+</div>
+
+
+<!---Date Picker section-->
+<div class="container schedule my-2">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-center bg-primary p-2 m-2">Calendar Match</h1>
+        </div>
+        <div class="col-md-6">
+            <form class="form-group m-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="date" bsDatePicker class="form-control" [formControl]="name">
+                    </div>
+                    <div class="col-sm-6">
+                        <a (click)="onSchedule()" class="form-control btn btn-warning ">
+                            <h1 class="bold m-0 p-0">Search</h1>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Table for Schedule Section-->
+<div class="container schedule my-2">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Rep name</th>
+                <th scope="col">Doctor name</th>
+                <th scope="col">Treating Ailment</th>
+                <th scope="col">Medicine</th>
+                <th scope="col">Slot</th>
+                <th scope="col">Date</th>
+                <th scope="col">Doctor Contact #</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medi of repDoc">
+                <td>{{medi.rep_name}}</td>
+                <td>{{medi.doctor_name}}</td>
+                <td>{{medi.treating_Ailment}}</td>
+                <div *ngFor="let m1 of medi.medicine">
+                    <td>
+                        {{m1.medicine_name}}</td>
+                </div>
+                <td>{{medi.slot}}</td>
+                <td>{{medi.date}}</td>
+                <td>{{medi.doctor_contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
